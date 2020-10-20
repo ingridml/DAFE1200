@@ -1,0 +1,226 @@
+/*Remove the margins set by the browser*/
+*{
+    margin-top: 0;
+    padding: 0;
+    background-color: white;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*THE NAVIGATION BAR AND LOGO*/
+/*Overall design of the navigation bar*/
+header{
+    background-color: white;
+    padding-left: 2em;
+    padding-top: 1em;
+    display: block;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+/*Styling specifically for the logo*/
+.logo{
+    letter-spacing: 0.5em;
+    font-family: Arial, sans-serif;
+    color: #9a5eab;
+    text-decoration: none !important;
+    font-size: 1em;
+}
+/*Styling specifically for the unordered list*/
+#navShowHide{
+    position: absolute;
+    left:-999em
+}
+
+#navigation{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+/*Location of the elements in the navigation bar*/
+#navigation li{
+    display: inline;
+}
+/*Styling for each specific item in the unordered list*/
+#navigation li a{
+    display: inline-block;
+    color: #9a5eab;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 2em;
+    text-decoration: none !important;
+}
+/*Background-color of the element in the navigation bar that's currently active*/
+#navigation li a:active{
+    background-color:lavender;
+}
+/*Color of the text in the navigation bar when it is clicked on*/
+#navigation li a:hover{
+    color: black;
+}
+
+/*THE CONTENT OF THE HOME PAGE*/
+.homePage{
+    margin-right: 3em;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Sign in*/
+.column1{
+    float: left;
+    width: 50%;
+    padding-top: 3em;
+    padding-left: 5em;
+    padding-right: 1em;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.column1 h2{
+    color: #9a5eab;
+}
+.inputBox{
+    border-radius: 0.2em;
+    border: 0.1em solid #9a5eab;
+    margin: 0.3em;
+    background-color: white;
+}
+.submit{
+    border-radius: 0.2em;
+    border: 0.1em solid #9a5eab;
+    padding: 0.3em;
+    background-color: white;
+    cursor: pointer;
+    color: black;
+}
+.submit:hover {
+    background-color: white;
+    color: #9a5eab;
+}
+
+/*Information text box*/
+.column2{
+    float: left;
+    width: 50%;
+    padding-top: 3em;
+    padding-left: 1em;
+    padding-right: 7em;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.column2 h2{
+    color: #9a5eab;
+}
+
+.button{
+    border-radius: 0.2em;
+    border: 0.1em solid #9a5eab;
+    padding: 0.3em;
+    margin: 0.4em;
+    background-color: white;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: white;
+    color: #9a5eab;
+}
+
+/*CONTENT ON OTHER PAGES*/
+.pageContent{
+    font-family: Arial, sans-serif;
+    color: #9a5eab;
+    margin:2em;
+}
+
+.column3{
+    float: left;
+    width: 100%;
+    padding-top: 3em;
+    padding-left: 3em;
+    padding-right: 1em;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.column3 h2{
+    color: #9a5eab;
+}
+
+.signinPage{
+    margin-right: 3em;
+    margin-left: 3em;
+}
+
+/*MAKE THE WEBSITE RESPONSIVE FOR SEVERAL SCREEN SIZES*/
+@media (max-width: 50em){
+    #navigation{
+        display: none;
+        overflow: hidden;
+        padding: 0.25em;
+    }
+    #navigation li{
+        float: left;
+        width: 50%;
+    }
+    #navigation li a{
+        display: block;
+        padding: 1em;
+        margin-bottom: 1em;
+        text-align: center;
+        background-color: white;
+        color: #9a5eab;
+    }
+    #navShowHide + label{
+        display: block;
+        padding: 1em;
+        margin-bottom: 1em;
+        text-align: center;
+        background-color: white;
+        color: #9a5eab;
+    }
+
+    #navShowHide + label:active,
+    #navShowHide + label:focus{
+        background: lavender;
+        color: white;
+    }
+    #navShowHide + label:hover{
+        color: black;
+    }
+    #navShowHide + label:before{
+        content: "MENU";
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        color: #9a5eab;
+        cursor: pointer;
+    }
+    #navShowHide:checked + label{
+        margin: 0;
+    }
+    #navShowHide:checked + label:before{
+        content: "CLOSE MENU";
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        color: #9a5eab;
+    }
+    #navShowHide:checked ~ #navigation{
+        display: block;
+    }
+
+    .column1{
+        width: 100%;
+    }
+    .column2{
+        width: 100%;
+        padding-left: 5em;
+        padding-right: 2em;
+    }
+    .column3{
+        width: 100%;
+    }
+}
