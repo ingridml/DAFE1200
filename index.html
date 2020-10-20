@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>attender</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="attenderStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<!--NAVIGATION BAR AND LOGO-->
+<header>
+    <div>
+        <a href="index.html" class="logo"><h1>attender</h1></a>
+    </div>
+    <input type="checkbox" id="navShowHide">
+    <label for="navShowHide"></label>
+    <ul id="navigation">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="signin.html">SIGN IN</a></li>
+    </ul>
+</header>
+
+<div class="homePage">
+    <div class="row">
+        <!--SIGN IN BOX-->
+        <div class="column1" style="background-color:#ffffff;">
+            <form action="index.html" method="POST">
+                <h2>SIGN IN</h2>
+                <p>To get access to your attendance, <br> see your upcoming activities
+                    <br> and message your colloquium group, <br> your buddy or the nurse.</p>
+                <div>
+                    <label for="username">USERNAME: </label>
+                    <br>
+                    <input class="inputBox" type="text" name="username" id="username" minlength="5" maxlength="30" required>
+                    <br><br>
+                    <label for="user-password">PASSWORD: </label>
+                    <br>
+                    <input class="inputBox" type="password" name="user-password" id="user-password" required>
+                    <br><br>
+                    <input class="submit" type="submit" value="LOG IN">
+                </div>
+            </form>
+        </div>
+        <!--INFORMATION BOX AND "READ MORE" BUTTONS-->
+        <div class="column2" style="background-color:#ffffff;">
+            <h2>GET TO KNOW US</h2>
+            <p> Attender aims to reduce attendance issues among students in norwegian high schools
+                by combining attendance data collected through location services and technology.
+                <br>
+                <br>
+                Attender provides insight to attendance for students, teachers and parents,
+                as well as encouraging students to stay in school through motivation-increasing tools,
+                such as fun activities, a "buddy-system" and colloquium groups.
+            </p>
+            <button type="button" class="button" onclick=location.href="parents.html">Parents</button>
+            <button type="button" class="button" onclick=location.href="school.html">School</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
